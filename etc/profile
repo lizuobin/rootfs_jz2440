@@ -1,0 +1,10 @@
+#!/bin/sh
+export T_ROOT=/usr/local/tslib
+export LD_LIBRARY_PATH=/usr/local/tslib/lib:$LD_LIBRARY_PATH
+export TSLIB_CONSOLEDEVICE=none
+export TSLIB_FBDEVICE=/dev/fb0
+export TSLIB_TSDEVICE=/dev/input/event0
+export TSLIB_PLUGINDIR=$T_ROOT/lib/ts
+export TSLIB_CONFFILE=$T_ROOT/etc/ts.conf
+export POINTERCAL_FILE=/etc/pointercal
+export TSLIB_CALIBFILE=/etc/pointercal
