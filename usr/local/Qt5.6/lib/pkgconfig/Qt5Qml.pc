@@ -1,0 +1,14 @@
+prefix=/usr/local/Qt5.6
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+
+Name: Qt5 Qml
+Description: Qt Qml module
+Version: 5.6.0
+Libs: -L${libdir} -lQt5Qml 
+Libs.private: -L/usr/local/tslib/lib -L/usr/local/Qt5.6/lib -lQt5Network -lQt5Core -lpthread -lrt  
+Cflags: -I${includedir}/QtQml -I${includedir}
+Requires: Qt5Core Qt5Network
+
