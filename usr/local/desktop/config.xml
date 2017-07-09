@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<demolauncher>
+  <demos>
+    <desktop filename="" name="" image="/usr/local/desktop/img/back.png" args=""/>
+    <example filename="/usr/local/desktop/test" name="" image="/usr/local/desktop/img/1.png" args=""/>
+    <example filename="/usr/local/desktop/test" name="" image="/usr/local/desktop/img/2.png" args=""/>
+    <example filename="/usr/local/desktop/test" name="" image="/usr/local/desktop/img/3.png" args=""/>
+    <example filename="/usr/local/desktop/test" name="" image="/usr/local/desktop/img/4.png" args=""/>
+    <example filename="/usr/local/desktop/test" name="" image="/usr/local/desktop/img/5.png" args=""/>
+    <example filename="/usr/local/desktop/test" name="" image="/usr/local/desktop/img/6.png" args=""/>
+    <example filename="/usr/local/desktop/test" name="" image="/usr/local/desktop/img/7.png" args=""/>
+    <example filename="/usr/local/desktop/test" name="" image="/usr/local/desktop/img/8.png" args=""/>
+    <example filename="/usr/local/desktop/test" name="" image="/usr/local/desktop/img/9.png" args=""/>
+    <example filename="/usr/local/desktop/test" name="" image="/usr/local/desktop/img/10.png" args=""/>
+    <example filename="/usr/local/desktop/test" name="" image="/usr/local/desktop/img/11.png" args=""/>
+    <example filename="/usr/local/desktop/test" name="" image="/usr/local/desktop/img/12.png" args=""/>
+  </demos>
+</demolauncher>

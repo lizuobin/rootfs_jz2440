@@ -5,4 +5,34 @@ mount -t devpts devpts /dev/pts
 echo /sbin/mdev > /proc/sys/kernel/hotplug
 mdev -s
 mount -a
+
+export T_ROOT=/usr/local/tslib
+export LD_LIBRARY_PATH=/usr/local/tslib/lib:$LD_LIBRARY_PATH
+export TSLIB_CONSOLEDEVICE=none
+export TSLIB_FBDEVICE=/dev/fb0
+export TSLIB_TSDEVICE=/dev/input/event0
+export TSLIB_PLUGINDIR=$T_ROOT/lib/ts
+export TSLIB_CONFFILE=$T_ROOT/etc/ts.conf
+export POINTERCAL_FILE=/etc/pointercal
+export TSLIB_CALIBFILE=/etc/pointercal
+
+export QTEDIR=/usr/local/Qt5.6
+export LD_LIBRARY_PATH=/usr/local/Qt5.6/lib:$LD_LIBRARY_PATH
+export QT_QPA_GENERIC_PLUGINS=tslib
+export QT_QPA_FONTDIR=$QTEDIR/lib/fonts 
+export QT_QPA_PLATFORM_PLUGIN_PATH=$QTEDIR/plugins 
+export QT_QPA_PLATFORM=linuxfb:fb=/dev/fb0:size=480x272:mmSize=480x272:offset=0x0:tty=/dev/tty1
+export QT_QPA_FB_TSLIB=1
+export LD_PRELOAD=/lib/preloadable_libiconv.so
+
+if [ -e /etc/pointercal ];then
+	echo "don't need ts_calibrate ...." > /dev/console
+else
+	/usr/local/tslib/bin/ts_calibrate &
+fi
+
+/bin/stupid-ftpd.Linux6 -f /etc/stupid-ftpd.conf &
+
+/appbin/desktop &
+
 exec /etc/rc.local
